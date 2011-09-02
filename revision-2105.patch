@@ -1,0 +1,13 @@
+Index: lib/tmr.c
+===================================================================
+--- lib/tmr.c	(revision 2104)
++++ lib/tmr.c	(revision 2105)
+@@ -226,7 +226,7 @@
+ 		switch (dispatch_data->id) {
+ 		case MESSAGE_RES_TMR_TIMEREXPIREDCALLBACK:
+ 			if (callbacks.saTmrTimerExpiredCallback == NULL) {
+-				continue;
++				break;
+ 			}
+ 
+ 			res_lib_tmr_timerexpiredcallback =
